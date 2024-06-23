@@ -1,13 +1,19 @@
 let gridBody = document.getElementsByClassName("gridBody")[0];
+let gridSize = 16  
 
+window.onload = function pageLoad(){
+    generateCanvas();
+}
 
+function newCanvas(){ 
+    for (let i = 0; i < gridSize; i++){
+    gridBody.removeChild(gridBody.firstElementChild);
+    }
+    gridSize = prompt("Enter new canvas size")   
+    generateCanvas();
+}
 
-
-
-function newCanvas(){
-    
-    let gridSize = prompt("Enter new canvas size")   
-    
+function generateCanvas(){   
     if (prompt != null){
         for (let i = 0; i < gridSize; i++){
             const gridRow = document.createElement("div");
@@ -20,15 +26,7 @@ function newCanvas(){
                 gridRow.appendChild(gridCel);
             }
         };
-    };
+    }; 
+}
 
-    // if (prompt != null){
-    //     for (let i = 0; i < gridSize; i++){
-    //         const gridCel = document.createElement("div");
-    //         gridCel.className = 'gridCel';
-    //         gridRow.appendChild(gridCel);
-
-    //     }
-    // }
-};
 
