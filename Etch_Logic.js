@@ -1,6 +1,8 @@
 let gridBody = document.getElementsByClassName("gridBody")[0];
 let gridSize = 16  
 
+let colourSet
+
 window.onload = function pageLoad(){
     generateCanvas();
 }
@@ -23,10 +25,16 @@ function generateCanvas(){
             for (let i = 0; i < gridSize; i++){
                 const gridCel = document.createElement("div");
                 gridCel.className = 'gridCel';
+                gridCel.addEventListener("mouseover", changeColour);
                 gridRow.appendChild(gridCel);
             }
         };
     }; 
 }
+
+function changeColour(event){
+    event.currentTarget.style.backgroundColor = '#AD8B73';  
+}
+
 
 
