@@ -32,6 +32,7 @@ function generateCanvas(){
                 const gridCel = document.createElement("div");
                 gridCel.className = 'gridCel';
                 gridCel.addEventListener("mouseover", changeColour);
+                gridCel.style.opacity = 0.1;
                 gridRow.appendChild(gridCel);
             };
         };
@@ -41,14 +42,29 @@ function generateCanvas(){
 function changeColour(event){
 
     if (randomColour == true){   
+        let currentOpacity = event.currentTarget.style.opacity; 
+        if (currentOpacity) {
+            event.currentTarget.style.opacity = Number(currentOpacity) + 0.09;
+        } else{
+            event.currentTarget.style.opacity =  0.1;
+        };
+
         let r =  Math.random() * (255 - 0) + 0;
         let g =  Math.random() * (255 - 0) + 0;
         let b =  Math.random() * (255 - 0) + 0;
         const randomRgb = 'rgba(' + r + ',' + g + ',' + b + ')'   
         event.currentTarget.style.backgroundColor = randomRgb;   
     } else {
+        
+        let currentOpacity = event.currentTarget.style.opacity; 
+        if (currentOpacity) {
+            event.currentTarget.style.opacity = Number(currentOpacity) + 0.09;
+        } else{
+            event.currentTarget.style.opacity =  0.1;
+        }
+
         event.currentTarget.style.backgroundColor = 'rgba(173, 139, 115)';  
-    }
+    };
 
 };
 
