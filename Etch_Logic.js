@@ -18,7 +18,14 @@ function newCanvas(){
         gridBody.removeChild(gridBody.firstElementChild);
     };
     gridSize = prompt("Enter new canvas size")   
+    
+    if (gridSize >= 1 && gridSize < 100) {
     generateCanvas();
+    } else {
+        gridSize = 16
+        generateCanvas();
+        alert("Failed. Please enter a value between 1 - 100")
+    }
 };
 
 function generateCanvas(){   
