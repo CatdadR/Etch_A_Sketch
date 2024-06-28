@@ -1,8 +1,27 @@
 body   {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+    background-color: #FFFBE9;
+}
+
+h1      {
+    font-family: 'Coffee Latte', sans-serif;
+    font-size: 50px;
+    color:#AD8B73;
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+
+button  {
+    
+   
+    font-family: 'Coffee Latte', sans-serif;
+    font-size: 26px;
+    padding-top: 2%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #C8B6A6;
 }
 
 .btnContainer   {
@@ -17,10 +36,12 @@ body   {
     height: 800px;
     width: 800px;
     border-radius: 4px;
+    flex-direction: column;
 }
 
 .gridRow   {
     display: flex;
+    flex: 1;
     flex-direction: row;
     width: 100%;  
 }
@@ -28,6 +49,9 @@ body   {
 .gridCel{
     display: flex;
     flex: 1;
-    border: 2px whitesmoke solid;
-    border-radius: 5%;
+    margin: 1.5px;
+    background-color: rgba(227, 202, 165, 1);
+    border: 2px #e2c79d solid;
+    border-radius: 5%; 
+
 }
